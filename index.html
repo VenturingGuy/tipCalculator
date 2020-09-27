@@ -17,8 +17,12 @@
         const displayTip = document.querySelector('#tip-display')
         const displayTotal = document.querySelector('#tip-total')
 
-        const percent = parseInt(tipInput.value)
+        const bill = parseFloat(billInput.value)
+        const percent = parseFloat(tipInput.value)
+        const people = parseInt(peopleInput.value)
 
+        const tip = bill * percent / 100
+        const total = bill + tip
 
         billInput.addEventListener('input', function(e) {
 
