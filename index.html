@@ -21,19 +21,37 @@
         const percent = parseFloat(tipInput.value)
         const people = parseInt(peopleInput.value)
 
-        const tip = bill * percent / 100
-        const total = bill + tip
+        // const tip = bill * percent / 100
+        // const total = bill + tip
 
-        billInput.addEventListener('input', function(e) {
-
+        billInput.addEventListener('input', function(e){
+            const bill = parseFloat(billInput.value)
+            const percent = parseFloat(tipInput.value)
+            const people = parseInt(peopleInput.value)
+            const tip = bill * percent / 100
+            const total = bill + tip
+            displayTip.innerHTML = tip
+            displayTotal.innerHTML = total
         })
 
         tipInput.addEventListener('input', function(e){
-
+            const bill = parseFloat(billInput.value)
+            const percent = parseFloat(tipInput.value)
+            const people = parseInt(peopleInput.value)
+            const tip = bill * percent / 100
+            const total = bill + tip
+            displayTip.innerHTML = tip
+            displayTotal.innerHTML = total
         })
 
         peopleInput.addEventListener('input', function(e){
-
+            const bill = parseFloat(billInput.value)
+            const percent = parseFloat(tipInput.value)
+            const people = parseInt(peopleInput.value)
+            const tip = bill * percent / 100
+            const total = bill + tip
+            displayTip.innerHTML = tip
+            displayTotal.innerHTML = total
         })
 
 
