@@ -4,12 +4,17 @@
 <title></title>
 </head>
 <body>
-    <input id="bill-input" type="number">
-    <input id="tip-input" type="number">
-    <input id="people-input" type="number">
-    <h2 id="tip-display">Tip</h2>
-    <h2 id="tip-total">Total</h2>
-
+    <div id="display">
+        <h3>Bill</h3>
+        <input id="bill-input" type="number">
+        <h3>Tip %</h3>
+        <input id="tip-input" type="number">
+        <h3>Number of people</h3>
+        <input id="people-input" type="number">
+        
+        <h2 id="tip-display">Tip</h2>
+        <h2 id="tip-total">Total</h2>
+    </div>
     <script>
         const billInput = document.querySelector('#bill-input')
         const tipInput = document.querySelector('#tip-input')
@@ -17,18 +22,11 @@
         const displayTip = document.querySelector('#tip-display')
         const displayTotal = document.querySelector('#tip-total')
 
-        const bill = parseFloat(billInput.value)
-        const percent = parseFloat(tipInput.value)
-        const people = parseInt(peopleInput.value)
-
-        // const tip = bill * percent / 100
-        // const total = bill + tip
-
         billInput.addEventListener('input', function(e){
             const bill = parseFloat(billInput.value)
             const percent = parseFloat(tipInput.value)
             const people = parseInt(peopleInput.value)
-            const tip = bill * percent / 100
+            const tip = (bill * percent / 100 / people).toFixed(2)
             const total = bill + tip
             displayTip.innerHTML = tip
             displayTotal.innerHTML = total
@@ -38,7 +36,7 @@
             const bill = parseFloat(billInput.value)
             const percent = parseFloat(tipInput.value)
             const people = parseInt(peopleInput.value)
-            const tip = bill * percent / 100
+            const tip = (bill * percent / 100 / people).toFixed(2)
             const total = bill + tip
             displayTip.innerHTML = tip
             displayTotal.innerHTML = total
@@ -48,7 +46,7 @@
             const bill = parseFloat(billInput.value)
             const percent = parseFloat(tipInput.value)
             const people = parseInt(peopleInput.value)
-            const tip = bill * percent / 100
+            const tip = (bill * percent / 100 / people).toFixed(2)
             const total = bill + tip
             displayTip.innerHTML = tip
             displayTotal.innerHTML = total
